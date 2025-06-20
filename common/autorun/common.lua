@@ -4,7 +4,6 @@ local c = function(shell, nIndex, sText)
 	end
 end
 
-_ENV.shell.setCompletionFunction("packages/common/edit.lua", c)
 _ENV.shell.setCompletionFunction("packages/common/hexedit.lua", c)
 
 _ENV.shell.registerHandler(function(env, command, args)

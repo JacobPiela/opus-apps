@@ -1,0 +1,12 @@
+{
+	required = {
+	},
+	title = 'myNeural',
+	repository = 'JacobPiela/opus-apps/{{OPUS_BRANCH}}/myNeural',
+	description = [[A collection of apps that 
+are a WIP or only work with specific mods
+ I am playing with thay may or
+may not work for you.
+]],
+	license = 'MIT',
+}

@@ -1,0 +1,11 @@
+{
+	required = {
+	},
+	title = 'hex',
+	repository = 'JacobPiela/opus-apps/{{OPUS_BRANCH}}/hex',
+	description = [[hexcasting
+
+A set of apps to interact with hexcasting
+]],
+	license = 'MIT',
+}
