@@ -1,4 +1,3 @@
-
 local wand = _G.peripheral.find('wand')
 
 if not wand then
