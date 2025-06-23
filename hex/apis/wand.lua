@@ -1,4 +1,6 @@
 local wand = _G.peripheral.find('wand')
+local hexmanager = require('hexmanager/hexconvert')
+
 if not wand then
     error('No mind splice staff installed')
 end
@@ -9,6 +11,9 @@ if not _G.wandLock then
 end
 
 local Hex = {
+    _TYPE='module',
+    _NAME='hex.wand',
+    _VERSION='0.1.0',
     patterns = patterns
 }
 
@@ -66,24 +71,45 @@ function Hex.getMedia()--depends on hexical
     return Hex.cast({angles = "ddew",["iota$serde"] = "hextweaks:pattern",startDir = "WEST"})[1]--? test this
 end
 
-function Hex.constructSpell(patternlist)--TODO
-    local spell = {
+function Hex.getPos()--TODO test
+    wand.pushStack({
+        {angles = "qaq",["iota$serde"] = "hextweaks:pattern",startDir = "SOUTH_WEST"},
+        {angles = "aa",["iota$serde"] = "hextweaks:pattern",startDir = "SOUTH_WEST"},
         ["iota$serde"] = "hextweaks:list"
-    }
-    for key, pattern in ipairs(patternlist) do
-        if type(pattern) == "string" and patterns[pattern] then
-            spell[key] = {
-                angles = patterns[pattern]["angles"],
-                startDir = patterns[pattern]["startDir"],
-                ["iota$serde"] = "hextweaks:pattern"
-            }
+    })
+    wand.runPattern()
+    return wand.popStack()
+end
+
+function Hex.iotaserde(spell)--TODO test
+    if type(spell) == "table" then
+        if spell["angles"] then
+            spell["iota$serde"] = "hextweaks:pattern"
+        elseif spell["x"] then
+            spell["iota$serde"] = "hextweaks:vec3"
+        elseif spell["uuid"] then
+            spell["iota$serde"] = "hextweaks:entity"
         else
-            spell[key] = pattern
+            for key, iota in ipairs(spell) do
+                    Hex.iotaserde(iota)
+            end
         end
     end
+
     return spell
 end
 
+function Hex.deIotaserde(spell)--TODO test
+    for key, iota in ipairs(spell) do
+        if key == "iota$serde" then
+            iota = nil
+        elseif type(iota) == "table" then
+            Hex.iotaserde(iota)
+        end
+    end
+
+    return spell
+end
 
 
 return Hex
