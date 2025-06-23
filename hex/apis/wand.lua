@@ -1,9 +1,12 @@
+
 local wand = _G.peripheral.find('wand')
-local hexmanager = require('hexmanager/hexconvert')
 
 if not wand then
     error('No mind splice staff installed')
 end
+
+local Util  = require('opus.util')
+require('/packages/hex/hexmanager/hexconvert')
 
 
 if not _G.wandLock then
@@ -17,7 +20,7 @@ local Hex = {
     patterns = patterns
 }
 
-function Hex.getLock()
+function Hex.getLock()--broken after crash
     local timeout = os.startTimer(7)
     while _G.wandLock do
         event, id = os.pullEvent()
@@ -45,8 +48,8 @@ function Hex.cast(pattren)
     return stack
 end
 
-function Hex.runPattern(arg1,arg2,arg3)
-    return wand.runPattern(arg1,arg2,arg3)--TODO check count works
+function Hex.runPattern(...)
+    return wand.runPattern(...)
 end
 function Hex.getStack()
     return wand.getStack()
@@ -68,10 +71,12 @@ function Hex.enlightened()
 end
 
 function Hex.getMedia()--depends on hexical
-    return Hex.cast({angles = "ddew",["iota$serde"] = "hextweaks:pattern",startDir = "WEST"})[1]--? test this
+    return Hex.cast({{angles = "qaq",["iota$serde"] = "hextweaks:pattern",startDir = "SOUTH_WEST"},
+        {angles = "ddew",["iota$serde"] = "hextweaks:pattern",startDir = "WEST"},
+        ["iota$serde"] = "hextweaks:list"})[1]
 end
 
-function Hex.getPos()--TODO test
+function Hex.getPos()
     wand.pushStack({
         {angles = "qaq",["iota$serde"] = "hextweaks:pattern",startDir = "SOUTH_WEST"},
         {angles = "aa",["iota$serde"] = "hextweaks:pattern",startDir = "SOUTH_WEST"},
@@ -81,7 +86,7 @@ function Hex.getPos()--TODO test
     return wand.popStack()
 end
 
-function Hex.iotaserde(spell)--TODO test
+function Hex.iotaserde(spell)
     if type(spell) == "table" then
         if spell["angles"] then
             spell["iota$serde"] = "hextweaks:pattern"
@@ -93,23 +98,47 @@ function Hex.iotaserde(spell)--TODO test
             for key, iota in ipairs(spell) do
                     Hex.iotaserde(iota)
             end
+            spell["iota$serde"] = "hextweaks:list"
         end
     end
 
     return spell
 end
 
-function Hex.deIotaserde(spell)--TODO test
-    for key, iota in ipairs(spell) do
-        if key == "iota$serde" then
-            iota = nil
-        elseif type(iota) == "table" then
-            Hex.iotaserde(iota)
+function Hex.deIotaserde(spell)
+    if type(spell) == "table" then
+        if spell["iota$serde"] then
+            spell["iota$serde"] = nil
+        end
+        for key, iota in ipairs(spell) do
+            Hex.deIotaserde(iota)
         end
     end
-
     return spell
 end
 
+
+function Hex.compile(spell)
+    return HexConvert.compile(spell)
+end
+
+function Hex.runHexFile(file)
+    local f = Util.readFile(file, 'rb')
+    if not f then
+		error('Unable to open ' .. file)
+	end
+    local spell = HexConvert.compile(f)
+    spell = Hex.iotaserde(spell)
+    return Hex.cast(spell)
+end
+
+function Hex.runPatternFile(file)
+    local f = Util.readFile(file, 'rb')
+    if not f then
+		error('Unable to open ' .. file)
+	end
+    spell = Hex.iotaserde(textutils.unserialize(f))
+    return Hex.cast(spell)
+end
 
 return Hex

@@ -1,15 +1,6 @@
-local path_to_script = debug.getinfo(1).source
-local base_directory = path_to_script:match("^@(.*)[/\\]programs[/\\].*%.lua$")
-package.path = package.path..";"..base_directory.."/?.lua"
-
 require('hexmanager/hexconvert')
 
-print("Reading from Focal Port on right side...")
-local focal_port = peripheral.wrap('right')
-if not focal_port or not focal_port.readIota then
-    print('Focal port not attached to right side.')
-    return 1
-end
+local args = {...}
 
 local focal_port
 if args[2] then
