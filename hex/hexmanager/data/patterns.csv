@@ -1,0 +1,480 @@
+﻿Abacus Purification,E,aqaeaq,0,list_size
+Additive Distillation,NE,waaw,0,add
+Akasha's Distillation,W,qqqwqqqqqaq,0,akashic/read
+Akasha's Gambit,E,eeeweeeeede,0,akashic/write
+Alidade's Purification,E,wa,0,get_entity_look
+Alter Gravity,NW,wdwdwaaqw,0,interop/gravity/set
+Alter Scale,NE,ddwdwwdwwd,0,interop/pehkui/set
+Arc's Reflection,NE,qdwdq,0,const/double/pi
+Archer's Distillation,E,wqaawdd,0,raycast
+Architect's Distillation,E,weddwaa,0,raycast/axis
+Assessor's Purification,E,wdwewewewewewqw,0,writable/entity
+Assessor's Reflection,E,deeeeeq,0,writable
+Auditor's Purification,E,wawqwqwqwqwqwew,0,readable/entity
+Auditor's Reflection,E,aqqqqqe,0,readable
+Augur's Exaltation,SE,awdd,0,if
+Augur's Purification,NE,aw,0,bool_coerce
+Axial Purification,NW,qqqqqaww,0,coerce_axial
+Banish Sentinel,NE,qdwdqdw,0,sentinel/destroy
+Black Sun's Nadir,SW,qqqqqaewawawe,0,potion/wither
+Black Sun's Zenith,SW,qqaawawaeqqdd,1,potion/absorption
+Blink,SW,awqqqwaq,0,blink
+Blue Sun's Nadir,W,qqqqqawwawawd,0,potion/levitation
+Blue Sun's Zenith,W,qqqaawawaeqdd,1,potion/night_vision
+Bookkeeper's Gambit,,,0,mask
+Break Block,E,qaqqqqq,0,break_block
+Ceiling Purification,E,qwe,0,ceil
+Charon's Gambit,SW,aqdee,0,halt
+Chronicler's Gambit,E,wdwewewewewew,0,write/entity
+Chronicler's Purification,E,wawqwqwqwqwqw,0,read/entity
+Circle's Reflection,NW,eawae,0,const/double/tau
+Combination Distillation,NW,qaeaq,0,concat
+Compass' Purification,E,aa,0,entity_pos/eye
+Compass' Purification II,NE,dd,0,entity_pos/foot
+Conjunction Distillation,NE,wdw,0,and
+Conjure Block,NE,qqa,0,conjure_block
+Conjure Light,NE,qqd,0,conjure_light
+Consideration,W,qqqaw,0,escape
+Cosine Purification,SE,qqqqqad,0,cos
+Craft Artifact,E,wwaqqqqqeawqwqwqwqwqwwqqeadaeqqeqqeadaeqq,0,craft/artifact
+Craft Cypher,E,waqqqqq,0,craft/cypher
+Craft Phial,SW,aqqqaqwwaqqqqqeqaqqqawwqwqwqwqwqw,1,craft/battery
+Craft Trinket,E,wwaqqqqqeaqeaeqqqeaeq,0,craft/trinket
+Create Lava,E,eaqawqadaqd,1,create_lava
+Create Water,SE,aqawqadaq,0,create_water
+Destroy Liquid,SW,dedwedade,0,destroy_water
+Dioscuri Gambit,E,aadadaaw,0,2dup
+Disjunction Distillation,SE,waw,0,or
+Dispel Rain,E,eeewwweeewwaqqddqdqd,1,dispel_rain
+Division Distillation,NE,wdedw,0,div_cross
+Edify Sapling,NE,wqaqwd,0,edify
+Entity Purification,SE,qqqqqdaqa,0,get_entity
+Entity Purification: Animal,SE,qqqqqdaqaawa,0,get_entity/animal
+Entity Purification: Item,SE,qqqqqdaqaaww,0,get_entity/item
+Entity Purification: Living,SE,qqqqqdaqaawd,0,get_entity/living
+Entity Purification: Monster,SE,qqqqqdaqaawq,0,get_entity/monster
+Entity Purification: Player,SE,qqqqqdaqaawe,0,get_entity/player
+Entropy Reflection,NW,eqqq,0,random
+Equality Distillation,E,ad,0,equals
+Erase Item,E,qdqawwaww,0,erase
+Euler's Reflection,E,aaq,0,const/double/e
+Excisor's Distillation,SW,edqdewaqa,0,list_remove
+Exclusion Distillation,NW,dwa,0,xor
+Exclusionary Distillation,NW,dwaeaqa,0,xor_bit
+Explosion,E,aawaawaa,0,explode
+Extinguish Area,SW,ddedwdwd,0,extinguish
+False Reflection,NE,dedq,0,const/false
+Fireball,E,ddwddwdd,0,explode/fire
+Fisherman's Gambit,W,ddad,0,fisherman
+Fisherman's Gambit II,E,aada,0,fisherman/copy
+Flay Mind,NE,qeqwqwqwqwqeqaeqeaqeqaeqaqded,1,brainsweep
+Flight,NW,eawwaeawawaa,1,flight
+Flock's Disintegration,NW,qwaeawq,0,splat
+Flock's Gambit,SW,ewdqdwe,0,last_n_list
+Flock's Reflection,NW,qwaeawqaeaqa,0,stack_len
+Floor Purification,E,ewq,0,floor
+Gemini Decomposition,E,aadaa,0,duplicate
+Gemini Gambit,E,aadaadaa,0,duplicate_n
+Gravitational Purification,NE,wawawddew,0,interop/gravity/get
+Greater Fold Reflection,W,aqwqawaaqa,0,circle/bounds/max
+Greater Teleport,E,wwwqqqwwwqqeqqwwwqqwqqdqqqqqdqq,1,teleport
+Green Sun's Nadir,SE,qqqqqadwawaw,0,potion/slowness
+Green Sun's Zenith,E,aawawaeqqqqdd,1,potion/strength
+Gulliver's Purification,NW,aawawwawwa,0,interop/pehkui/get
+Hermes' Gambit,SE,deaqq,0,eval
+Huginn's Gambit,NW,eqqwawqaaw,0,write/local
+Ignite Block,SE,aaqawawa,0,ignite
+Impulse,SW,awqqqwaqw,0,add_motion
+Inequality Distillation,E,da,0,not_equals
+Integration Distillation,SW,edqde,0,append
+Internalize Pigment,E,awddwqawqwawq,0,colorize
+Intersection Distillation,NE,wdweaqa,0,and_bit
+Introspection,W,qqq,0,open_paren
+Inverse Cosine Purification,NE,adeeeee,0,arccos
+Inverse Sine Purification,SE,ddeeeee,0,arcsin
+Inverse Tangent Purification,NE,eadeeeeew,0,arctan
+Inversion Purification,NW,dweaqa,0,not_bit
+Jester's Gambit,E,aawdd,0,swap
+Length Purification,NE,wqaqw,0,abs_len
+Lesser Fold Reflection,SW,eaqwqaewdd,0,circle/bounds/min
+Locate Sentinel,E,waeawaede,0,sentinel/get_pos
+Locator's Distillation,E,dedqde,0,index_of
+Lodestone Reflection,SW,eaqwqaewede,0,circle/impetus_dir
+Logarithmic Distillation,NW,eqaqe,0,logarithm
+Make Note,W,adaa,0,beep
+Maximus Distillation,SE,e,0,greater
+Maximus Distillation II,SE,ee,0,greater_eq
+Mind's Reflection,NE,qaq,0,get_caster
+Minimus Distillation,SW,q,0,less
+Minimus Distillation II,SW,qq,0,less_eq
+Modulus Distillation,NE,addwaad,0,modulo
+Multiplicative Distillation,SE,waqaw,0,mul_dot
+Muninn's Reflection,NE,qeewdweddw,0,read/local
+Negation Purification,NW,dw,0,not
+Nullary Reflection,E,d,0,const/null
+Numerical Reflection,,,0,number
+Overgrow,NE,wqaqwawqaqw,0,bonemeal
+Pace Purification,E,wq,0,get_entity_velocity
+Place Block,SW,eeeeede,0,place_block
+Power Distillation,NW,wedew,0,pow_proj
+Prospector's Gambit,E,aaedd,0,over
+Recharge Item,NW,qqqqqwaeaeaeaeaea,0,recharge
+Red Sun's Nadir,SE,qqqqqadwawaww,0,potion/poison
+Red Sun's Zenith,SE,qaawawaeqqqdd,1,potion/haste
+Retrograde Purification,E,qqqaede,0,reverse_list
+Retrospection,E,eee,0,close_paren
+Reveal,NE,de,0,print
+Rotation Gambit,E,aaeaa,0,rotate
+Rotation Gambit II,NE,ddqdd,0,rotate_reverse
+Scout's Distillation,E,weaqa,0,raycast/entity
+Scribe's Gambit,E,deeeee,0,write
+Scribe's Reflection,E,aqqqqq,0,read
+Selection Distillation,NW,deeed,0,index
+Selection Exaltation,NW,qaeaqwded,0,slice
+Sine Purification,SE,qqqqqaa,0,sin
+Single's Purification,E,adeeed,0,singleton
+Speaker's Decomposition,SW,aaqwqaa,0,deconstruct
+Speaker's Distillation,SE,ddewedd,0,construct
+Stadiometer's Purification,NE,awq,0,get_entity_height
+Subtractive Distillation,NW,wddw,0,sub
+Summon Greater Sentinel,E,waeawaeqqqwqwqqwq,1,sentinel/create/great
+Summon Lightning,E,waadwawdaaweewq,1,lightning
+Summon Rain,W,wwweeewwweewdawdwad,1,summon_rain
+Summon Sentinel,E,waeawae,0,sentinel/create
+Surgeon's Exaltation,NW,wqaeaqw,0,modify_in_place
+Swindler's Gambit,SE,qaawdde,0,swizzle
+Tangent Purification,SW,wqqqqqadq,0,tan
+Thoth's Gambit,NE,dadad,0,for_each
+True Reflection,SE,aqae,0,const/true
+Undertaker's Gambit,E,ddqaa,0,tuck
+Unifying Distillation,SE,waweaqa,0,or_bit
+Uniqueness Purification,NE,aweaqa,0,to_set
+Vacant Reflection,NE,qqaeaae,0,empty_list
+Vector Disintegration,E,qeeeee,0,deconstruct_vec
+Vector Exaltation,E,eqqqqq,0,construct_vec
+Vector Reflection +X,NW,qqqqqea,0,const/vec/px
+Vector Reflection +Y,NW,qqqqqew,0,const/vec/py
+Vector Reflection +Z,NW,qqqqqed,0,const/vec/pz
+Vector Reflection -X,SW,eeeeeqa,0,const/vec/nx
+Vector Reflection -Y,SW,eeeeeqw,0,const/vec/ny
+Vector Reflection -Z,SW,eeeeeqd,0,const/vec/nz
+Vector Reflection Zero,NW,qqqqq,0,const/vec/0
+Wayfind Sentinel,E,waeawaedwa,0,sentinel/wayfind
+Waystone Reflection,SW,eaqwqae,0,circle/impetus_pos
+White Sun's Nadir,NW,qqqqqaqwawaw,0,potion/weakness
+White Sun's Zenith,NW,qqqqaawawaedd,1,potion/regeneration
+Zone Distillation: Animal,SE,qqqqqwdeddwa,0,zone_entity/animal
+Zone Distillation: Any,SE,qqqqqwded,0,zone_entity
+Zone Distillation: Item,SE,qqqqqwdeddww,0,zone_entity/item
+Zone Distillation: Living,SE,qqqqqwdeddwd,0,zone_entity/living
+Zone Distillation: Monster,SE,qqqqqwdeddwq,0,zone_entity/monster
+Zone Distillation: Non-Animal,NE,eeeeewaqaawa,0,zone_entity/not_animal
+Zone Distillation: Non-Item,NE,eeeeewaqaaww,0,zone_entity/not_item
+Zone Distillation: Non-Living,NE,eeeeewaqaawd,0,zone_entity/not_living
+Zone Distillation: Non-Monster,NE,eeeeewaqaawq,0,zone_entity/not_monster
+Zone Distillation: Non-Player,NE,eeeeewaqaawe,0,zone_entity/not_player
+Zone Distillation: Player,SE,qqqqqwdeddwe,0,zone_entity/player
+,NE,wwedwe,0,get_tags
+,NE,wwedwew,0,check_tag
+Acknowledge Truename,SE,awwqaq,0,truename_agree_eula
+Aergia's Gambit,NE,ddeaqq,0,opnop_useless
+Anularis Gambit,E,deeeeeqdwewewewewew,0,write_ring
+Anularis Reflection,E,aqqqqqeawqwqwqwqwqw,0,read_ring
+Athena's Gambit,SE,dweaqqw,0,catchy_eval
+Athena's Reflection,SE,dweaqqqqd,0,stringify_mishap
+Athena's Revelation,SE,dweaqqqqa,0,reveal_mishap
+Authenicator's Reflection,E,aqqqqqeawqwqwqwqwqwe,0,check_read_ring
+Bind Mirror,NE,deeeedwwdwdw,0,bind_mirror
+Canary's Purification,E,wawaw,0,check_ambit
+Cherishing Reflection,SE,waaqqqqqee,0,check_read_pendant
+Conjure Redstone Block,NE,qqadd,0,conjure_redstone
+Conjure Tasty Treat,SW,eeewdw,0,conjure_tasty_treat
+Craft Gloopifact,E,wwaadaqwaweqqwaweewawqwwwwadeeeeeqww,0,craft/gloopifact
+Craft Potion,E,wawwedewwqqq,0,craft/potion
+Curiosity's Purification,NE,qwaeawqaqded,0,torty_get_type
+Cut Stone,E,edwdqeeeeaaeaeaeaea,0,stonecut
+Dispense,SW,wqwaeqqqeddqeqd,0,dispense
+Dymo's Gambit,SW,wwedwewdweqawqwqwqwqwqw,0,set_label
+Etho's Purification,SE,ddwwdwwdd,0,read_comparator
+Euler's Purification,NE,qed,0,assert
+Everflame Reflection,E,eaqawqadaqdeewewewe,0,in_nether
+Forge Hex Blade,E,waqqqqqwwwaqwwwwaq,0,craft/hex_blade
+Forge Hex Pickaxe,E,wwaqqqqqeaqdewaqweaewqawedqqqeaeq,0,craft/hex_pickaxe
+Frogi Snack,E,wawadawaewqaw,0,frog_eat
+Gloopcaster's Gambit,NE,deeeeeqqadaqw,0,gloopifact_write
+Gloopcaster's Reflection,NE,aqqqqqeqadaqw,0,gloopifact_read
+Gloopessor's Distillation,NE,wwqadaqwwdeeeee,0,gloopifact_check_write
+Gloopimind Download,NE,qedadewdde,0,gloopimind_download
+Gloopimind Upload,NE,qewdweeddw,0,gloopimind_upload
+Gloopitor's Reflection,NE,wwqadaqwwaqqqqq,0,gloopifact_check_read
+Handoff,E,qwawqwadawqwa,0,swap_hotbar_slot
+Handy Gambit,W,dwewdwe,0,set_hotbar_slot
+Handy Reflection,E,qwawqwa,0,get_hotbar_slot
+Jeweler's Reflection,E,deeeeeqdwewewewewewq,0,check_write_ring
+Lover's Gambit,E,deewqqqqqwee,0,write_left_ring
+Lover's Reflection,E,aqqweeeeewqq,0,read_left_ring
+Memento's Gambit,SE,wadeeeeeq,0,write_pendant
+Memento's Reflection,SE,waaqqqqqe,0,read_pendant
+Merchant's Purification,NE,qaqqwawqwqwqwqwqw,0,cooler_get_item_bound_caster
+Merchant's Reflection,NE,qaqqaqqqqq,0,get_item_bound_caster
+Nostalgic Reflection,SE,wadeeeeeqe,0,check_write_pendant
+Notary's Distillation,NE,qaqqwawqwqwqwqwqwead,0,cooler_compare_item_bound_caster
+Notary's Purification,NE,qaqqaqqqqqead,0,compare_item_bound_caster
+Orchard's Reflection,SE,dqqqqq,0,read_orchard
+Orchard's Reflection II,SE,dqqqqqdeeeqdqeee,0,read_orchard_list
+Renew Truename,SW,wwwdwwwdwqqaqwedeewawwwawww,0,clear_truename
+Ritualist's Gambit,E,deeeeeqdwewewewdw,0,block_write
+Ritualist's Purification,E,aqqqqqeawqwaw,0,block_read
+Rival's Gambit,E,deeeeewqqqqq,0,write_right_ring
+Rival's Reflection,E,aqqqqqweeeee,0,read_right_ring
+Seth's Purification,SW,aawwawwaa,0,read_redstone
+Surveyor's Distillation,E,deeeeeqdwewewewdwe,0,can_block_write
+Surveyor's Purification,E,aqqqqqeawqwawe,0,can_block_read
+Teach Frogi,E,wwaqqqqqeaqdqaqedeqaqdqqeaqwdwqae,0,craft/casting_frog
+Teach Inventorty,E,waqqqqqwqawqedeqwaq,0,craft/inventorty
+Temp Bind Mirror,NW,aqqqqawwawaw,0,temp_bind_mirror
+Terra Reflection,SE,aqawqadaqdeeweweweew,0,in_overworld
+Torty Transfer,SW,wawqwaqewdwwdade,0,torty_transfer
+Torty's Max Purification,NW,ewdqdwewaqae,0,torty_max_count
+Torty's Purification,E,awewdqdwewaaw,0,torty_count
+Torty's Reflection,E,qaeaqeaq,0,torty_inv_sizes
+Torty's Reflection II,E,waeaeaeawa,0,torty_inv_names
+Alidade's Purification II,E,waa,0,direction/const
+Greater Translocation,SE,eeqeeqeeeqeeqdeeqeqqwqqqeeqeqqwqq,0,move_block/spell
+Hadamard's Distillation,W,awaqawa,0,hadamard/const
+Imprecision Purification,SE,aadeeaa,0,round/const
+Inertia Purification,E,daad,0,is_gravity/const
+Jockey Purification,SE,qqdeeaedeaee,0,get_rider/const
+Lesser Teleport,NE,edqdewqaeaq,0,lesser_teleport/spell
+Momentum Swap,SW,adaadaqedaddad,0,swap/spell
+Optician's Distillation,SE,qqqqqdqqqqq,0,reflection/const
+Place Projectile,SE,weeeweede,0,projectile/spell
+Propulsion,SW,wqeqaaeeeweeeaaqeqqaaq,1,fast/spell
+Rotate,E,qqqadeeed,0,rotate/spell
+Rotate II,W,eeedaqqqa,0,rotate_two/spell
+Rotate: Block,SE,qqqqqaqqqwadeeed,0,rotate_block/spell
+Shooter Purification,E,aadedade,0,get_shooter/const
+Sniper's Distillation,E,weqaqded,0,pixel/raycast
+Span Distillation,W,qaqeeqaq,0,get_vec_from/const
+Sphere Distillation,SE,qqqqqeddedq,0,get_vec/const
+Twokai's Ideal Condition,SW,wwqqqwadaadawqqqww,1,zero_g/spell
+Vehicle Purification,SE,qqdeewee,0,get_vehicle/const
+Visibility Distillation,NW,aqadwawaw,0,visibility/const
+Clerk's Abacus Purification,NE,qaqwaqeewaqaeaq,0,dict/size
+Clerk's Decomposition,NE,qaqwaqdwqqqwae,0,dict/break
+Clerk's Decomposition II,NE,qaqwaqdwqqqwq,0,dict/break/single
+Clerk's Distillation,NE,qaqwaqeqdweeew,0,dict/from
+Clerk's Excisor's Distillation,NE,qaqwaqeqdd,0,dict/remove
+Clerk's Integration Exaltation,NE,qaqwaqdqedqde,0,dict/set
+Clerk's Surgeon's Exaltation,NE,qaqwaqdadeeed,0,dict/get
+Clerk's Thoths Gambit,NE,qaqwaqedadad,0,dict/thoths
+Clerk's Vacant Reflection,NE,qaqwaq,0,dict/new
+Iterators Purification,NE,wdwaw,0,itter
+Mass Mindflay,NE,qeqwqwqwqwqeqaeqeaqeqaeqaqdededwaqdedsde,0,grand/massbrainsweep
+Nadir of Nausea,E,weed,0,nausea
+Natural Search,W,wqqewawqwqedawdweewaeqwawdaqwdewawdadwawqwawdadwaw,1,craft/grandscroll
+Progress Gambit,SW,qqaw,0,page/right
+Regress Gambit,SE,eedw,0,page/left
+Reroll Pattern,NE,qaqqqqwwawwqqeaddwwddas,0,grand/reroll
+Suspicious Glyph,W,dewdeqwwedaqedwadweqewwd,1,suicide
+Accelerate,SE,wwwdwdwwwawqqeqwqqwqeqwqq,1,tick
+Allegiance Distillation,SW,dwqqwdedwqqwddwww,0,wisp/owner
+Allow Transfer,NW,qqqqqewwqeeeee,0,wisp/transfer/allow
+Allow Transfer Others,SW,eeeeeqwweqqqqq,0,wisp/transfer/others/allow
+Bind Storage,NW,qaqwqaqwqaq,0,mote/storage/bind
+Bind Storage - Temporary,NE,edewedewede,0,mote/storage/bind/temp
+Bind Wisp,SW,aqweewqaeaqweewqaqwww,1,wisp/seon/set
+Boxer's Purification,E,aeqqqqea,0,toughness
+Brigh's Gambit,SW,eweeewedww,0,everbook/toggle_macro
+Capacity Reflection,SE,awedqdewa,0,mote/storage/remaining_capacity/get
+Classifier's Purification,SW,awd,0,type/iota
+Close Transmit,E,ewaqawe,0,link/comm/close_transmit
+Consume Wisp,NW,wawqwawwwewwwewwwawqwawwwewwwewdeaweewaqaweewaawwww,1,wisp/consume
+Containment Distillation,NE,dwqaeaqwd,0,mote/storage/contains
+Craft,SE,wwawdedwawdewwdwaqawdwwedwawdedwaww,0,mote/craft
+Delay Wisp,NW,aqawded,0,wisp/trigger/tick
+Depot Gambit,SE,eeeeedw,0,mote/storage/set
+Depot Purification,SW,qqqqqaw,0,mote/storage/get
+Disallow Transfer,NW,qqqqqeqdeddweqqqqq,0,wisp/transfer/disallow
+Disallow Transfer Others,SW,eeeeeqeaqaawqeeeee,0,wisp/transfer/others/disallow
+Diver's Purification,NW,aqawdwaqawd,0,breath
+Elysium's Gambit,SE,qwqqqwqaeaqaaw,0,everbook/write
+Entity Distillation: Type,NE,dadqqqqqdad,0,get_entity/type
+Entity Purification: Wisp,SE,qqwdedwqqdaqaaww,0,get_entity/wisp
+Factorial Purification,SE,wawdedwaw,0,factorial
+Falling Block,E,wqwawqwqwqwqwqw,0,falling_block
+Familiar's Reflection,E,daqweewqaeaqweewqaqwwww,0,wisp/seon/get
+Freeze,W,weeeweedada,0,freeze
+Gate's Closing,W,qqqwwqqqwqqawdedw,0,gate/close
+Gate's Dismissal,E,edeqqaq,0,gate/unmark
+Gate's Opening,W,qaqeede,0,gate/mark
+Gate's Reflection,W,qwqwqwqwqwqqeaeaeaeaeae,1,gate/make
+Haste,W,aeawqqqae,0,wisp/move/speed/set
+Identity Reflection,NE,dedwqqwdedwqqaw,0,wisp/self
+Lamplighter's Purification,NE,qedqde,0,light_level
+Lethe's Gambit,SE,qwqqqwqaww,0,everbook/delete
+Link,E,eaqaaeqqqqqaweaqaaw,0,link
+Link Others,E,eqqqqqawqeeeeedww,0,link/others
+Listen,E,aqqqqqwdeddw,0,wisp/trigger/comm
+Manager's Purification,SE,aweewaqaweewaawww,0,wisp/hex
+Marked Distillation,E,edwwdeeede,0,gate/mark/get
+Marked Purification,W,qawwaqqqaq,0,gate/mark/num/get
+Mediafy Item,W,eaqa,0,mote/make
+Mnemosyne's Gambit,NE,eweeewedqdeddw,0,everbook/read
+Nurse's Purification,NW,aqwawqa,0,health
+Offering Purification,SE,awdedwaawwqded,0,mote/trade/get
+Open Transmit,W,qwdedwq,0,link/comm/open_transmit
+Particles,NE,eqqqqa,0,particles
+Pathfinder's Gambit,W,awqwawqaw,0,wisp/move/target/set
+Pathfinder's Reflection,E,ewdwewdew,0,wisp/move/target/get
+Phase Block,W,daqqqa,0,interop/fabric_only/phase_block
+Phonebook Purification,E,eqqqqqaww,0,link/get
+Physician's Purification,SW,qawde,0,type/entity
+Place Block II,W,eeeeedeeeee,0,place_type
+Popularity Reflection,W,qeeeeedww,0,link/num
+Postmaster's Reflection,SE,aweeeeewaa,0,link/comm/num
+Recitation Reflection,NE,weeeeew,0,link/comm/read
+Recognition Purification,SW,aeqqqqqawwd,0,link/get_index
+Reservoir Reflection,NW,aqaweewaqaweedw,0,wisp/media
+Return Item,E,qded,0,mote/return
+Running Product Purification,NE,qaawaaq,0,running/mul
+Running Sum Purification,W,aea,0,running/sum
+Send Iota,NW,qqqqqwdeddw,0,link/comm/send
+Seniority Purification,NW,qqwdedwqqaww,0,mote/villager/level/get
+Smelt,E,wqqqwqqadad,0,smelt
+Sorter's Purification,E,qaqqaea,0,type/block_item
+Sorter's Reflection,SW,edeedqd,0,type/item_held
+Speedometer's Reflection,E,eeewdqdee,0,wisp/move/speed/get
+Splitting Gambit,E,eaqaaw,0,mote/split
+Squire's Purification,NW,wqqqqw,0,armour
+Stacking Distillation,NW,aqaeqded,0,mote/combine
+Stacking Distillation II,SW,dedqeaqa,0,mote/combinable
+Stocktake Purification,SE,aweeeeewaaww,0,mote/contained/get
+Stocktake Reflection,NE,dwqqqqqwddww,0,mote/contained_type/get
+Summon Cyclic Wisp,NW,aqaweewaqawee,0,wisp/summon/ticking
+Summon Projectile Wisp,NW,aqaeqeeeee,0,wisp/summon/projectile
+Thanatos' Reflection,SE,qqaed,0,remaining_evals
+Timekeeper's Reflection,NW,ddwaa,0,current_tick
+Trade,NW,awdedwaeqded,0,mote/trade
+Unclogging Gambit,SE,aweeeeewa,0,link/comm/clear
+Unlink,W,qdeddqeeeeedwqdeddw,0,link/unlink
+Unlink Others,W,qeeeeedweqqqqqaww,0,link/unlink/others
+Use Item On,E,qqqwqqqqaa,0,mote/use_on
+Wander,E,eqwawqwaqww,0,wisp/trigger/move
+Weighing Purification,NW,qqqqwqqqqqaa,0,mote/count/get
+Zone Distillation: Non-Wisp,NE,eewaqaweewaqaaww,0,zone_entity/not_wisp
+Zone Distillation: Wisp,SE,qqwdedwqqwdeddww,0,zone_entity/wisp
+Zone Exaltation: Not-Type,NE,wdwqqqqqwdw,0,zone_entity/not_type
+Zone Exaltation: Type,SE,waweeeeewaw,0,zone_entity/type
+Artificer's Gambit,E,wqaawddewdwewewewewew,0,bind_construct
+Automaton's Reflection,E,qaawedee,0,construct_get_self
+Bind Figment,NE,qaqdaqwqaeedewd,1,set_fake_impetus_player
+Broadcast Instructions,SE,qqaaqqqqwq,0,instructions/broadcast
+Collector's Distillation,NE,dewqa,0,get_inventory/items
+Command: Drop Item,E,qaaqdwdw,0,give_command/drop_off
+Command: Harvest,E,qaaqqedwed,0,give_command/harvest
+Command: Move To Position,E,qaaqwdaqqqa,0,give_command/move_to
+Command: Pick Up Item,E,eddeawaw,0,give_command/pick_up
+Command: Use On Block,E,qaaqdee,0,give_command/use/block
+Create Spider Construct,SW,wqwqwwqwqwqwwaeqaqdwdqaqe,0,create_construct/spider
+Duelist's Purification,E,adeq,0,get_main_hand
+Ending Distillation,W,weeee,0,pattern/tail
+Entity Purification: Construct,SE,qqqqqdaqaawedde,0,get_entity/construct
+Forget Pigment,NE,wqwawqqawddwqwdd,0,colorizer/delete
+Fragment's Purification,W,eqqqq,0,pattern/line_count
+Hex Shield,NE,eweeewe,0,create_shield/normal
+Hoarder's Distillation,NE,aqwed,0,get_inventory/stacks
+Logistician's Purification,W,dedqaa,0,get_stack_prop/item
+Memorize Pigment,NE,wqwawqqawddwqwede,0,colorizer/save
+Painter's Distillation,NW,aqqqqa,0,pattern/merge
+Recall Pigment,NE,wqwawqqawddwqeqaq,0,colorizer/load
+Revolving Distillation,W,deeee,0,pattern/rotate
+Send Instructions,E,qaaq,0,instructions/send
+Shieldbearer's Purification,E,qeda,0,get_off_hand
+Starting Distillation,E,wqqqq,0,pattern/head
+Treasurer's Purification,W,dedqaq,0,get_stack_prop/size
+Unstable Hex Shield,NE,eqdweeqdw,0,create_shield/glitchy
+Winding Purification,W,qeeee,0,pattern/start_dir
+Zone Distillation: Construct,SE,qqqqqwdeddwedde,0,zone_entity/construct
+Zone Distillation: Non-Construct,SE,eeeeewaqaawedde,0,zone_entity/not_construct
+Astral Gaze Reflection,NE,waawaq,0,astral_look
+Astral Locale Reflection,NE,qaqqqqaq,0,astral_pos
+Astral Projection,NW,qdadwewewdadeadwddaaedqdeddew,1,astral_projection
+Calligrapher's Exaltation,NE,aaqdwdwde,0,visage/text/bounded
+Calligrapher's Purification,NE,aaqdwdwd,0,visage/text/unbounded
+Etch Visage,NW,wddaaddw,0,macula/add
+Macula Erasure,W,awawa,0,macula/clear
+Macula Gambit,NE,aawawaa,0,macula/dimensions
+Media Purification I,W,ddew,0,get_entity_media
+Media Purification II,W,ddewa,0,get_pos_media
+Media Reflection,W,dde,0,get_media
+Medivh's Reflection,E,adda,0,cloak/read
+Addition Distillation: Matrix,E,waawawaeawwaea,0,matrix/add
+Blank Reflection,SE,awdwa,0,string/empty
+Breaking Reflection,E,waawaw,0,string/newline
+Case Distillation,W,dwwdwwdwdd,0,string/case
+Comma Reflection,E,qa,0,string/comma
+Concatenation Distillation,NE,waawaqwawqq,0,string/add
+Determinant Purification,W,aeawwaeawaw,0,matrix/determinant
+Discoverer's Distillation,E,waqwwaqa,0,string/find
+Identity Purification,SW,awwaeawwaqw,0,matrix/identity
+Input Purification,E,aqwaq,0,string/parse
+Inverse Purification,W,wwdqdwwdqaq,0,matrix/inverse
+Length Distillation: Str,E,waqaeaq,0,string/len
+Listener's Reflection,E,wded,0,string/chat/all
+Mitosis Gambit,SW,dwaqawdwdwwdqdwwd,0,matrix/split/hori
+Multiplication Distillation: Matrix,SE,waqawawwaeaww,0,matrix/mul
+Patternmaster's Purification,NW,wdwewdwdw,0,string/action
+Reader's Purification,E,awqwawqe,0,string/block/get
+Restoration Purification,SE,dwwdqdwwddawd,0,matrix/unmake
+Rotation Distillation,SW,awwaeawwawawddw,0,matrix/rotation
+Scrivener's Purification,E,wawqwawaw,0,string/iota
+Separation Distillation,E,aqwaqa,0,string/split
+Sifter's Gambit,SE,qwaqa,0,string/chat/prefix/set
+Sifter's Reflection,NE,ewded,0,string/chat/prefix/get
+Spacing Reflection,SE,awdwaaww,0,string/space
+Sprawling Distillation,SE,dwwdqdwwdwdwaqawd,0,matrix/concat/hori
+Toppling Gambit,SE,awdedwawawwaeawwa,0,matrix/split/vert
+Tower Distillation,SW,awwaeawwawawdedwa,0,matrix/concat/vert
+Transformation Purification,SW,awwaeawwaadwa,0,matrix/make
+Transpose Purification,E,wwaeawwaede,0,matrix/transpose
+Whisper Reflection,E,waqa,0,string/chat/caster
+Winnowing Distillation,E,aqwwaqwaad,0,string/sub
+Write,W,dwewdweq,0,string/block/set
+Zero Distillation,SW,awwaeawwa,0,matrix/zero
+Apothecary's Prfn.,SW,qqqqqedwd,0,getstatus
+Apothecary's Prfn. II,SE,eeeeeqawa,0,getstatuscategory
+Baton Reflection,SE,qwqqqwqawa,0,getrodlook
+Baton Reflection II,SE,qwqqqwqawaa,0,getrodpos
+Circle,SE,wwwwwwqwwwwwwqwwwwwwqwwwwwwqwwwwwwqwwwwww,0,circle
+Cleanse Status,SW,eeeeedaqdewed,0,removestatus
+Conduct Rod,E,eqqqqqawweqqqqqawweqqqqqawwdeqewwwwweqeeeqewwwwweqe,0,craftrod
+Decorator's Gambit,SW,wwawwqwwawwaqdq,0,setframerotation
+Decorator's Purification,SW,wwawwqwwawwaeae,0,readframerotation
+Discern Shroud,SE,qqqqqwwaawewaawdww,0,detectshroud
+Empower Mind Render,E,qweqadeqadeqadqqqwdaqedaqedaqeqaqdwawdwawdwaqawdwawdwawddwwwwwqdeddw,1,applymindrender
+Encore,SE,deaqqwqqqw,0,resetrod
+Entity Distillation: Status,E,eaeeeeeae,0,getbystatussingle
+Externalize Pigment,W,eqdweeqdwweeqddqdwwwdeww,0,paintconjured
+Finale,SW,aqdeeweeew,0,haltrod
+Hidden Sun's Zenith,SW,qqqqqaewawaweqa,1,invisibility
+Inscribe Idea,E,eweweweweweeewqaqwe,0,writeidea
+Media Infusion,E,wwaqqqqqeqqqwwwqqeqqwwwqqweqadadadaqeqeqadadadaqe,1,infusemedia
+Metadata Distillation,W,qwqwqwqwqwqaeqedeqe,0,readideawriter
+Metadata Purification,W,qwqwqwqwqwqqqeqaqeq,0,readideatime
+Metronome Gambit,SE,qwqqqwqaqddq,0,delayrod
+Metronome Reflection,SE,qwqqqwqawaaw,0,getrodstamp
+Noetic Gateway,NE,qeewwwweeqeqeewwwweeqdqqdwwwdqeqdwwwdqdadwwdqdwwddadaqadaawww,1,dimteleport
+Particle Burst,E,deeeewaaddwqqqqa,0,particleburst
+Pharmacist's Dstln.,SW,qqqqqedwdwd,0,getstatusduration
+Pharmacist's Dstln. II,SE,eeeeeqawawa,0,getstatuslevel
+Retrieve Idea,W,qwqwqwqwqwqqqwedewq,0,readidea
+Scrutinize Sentinel,E,waeawaeddwwd,0,readsentinel
+Spatial Interchange,E,wqqqwwwwwqqqwwwqdaqadwqqwdaqadweqeqqqqeqeqaqeqedeqeqa,1,swapspace
+Spatial Reflection,W,wqwqwqwqwqwaeqqe,0,getdim1
+Spatial Reflection II,W,wqwqwqwqwqwaqeeq,0,getdim2
+Stealth Shroud,E,wawwwdwdwwaqqqqqe,1,resistdetection
+Zone Exltn.: Not-Status,E,qweeeeewq,0,getbystatusinverse
+Zone Exltn.: Status,E,ewqqqqqwe,0,getbystatus
+Anchorite's Flight,SW,awawaawq,0,flight/local
+Wayfarer's Flight,NE,dwdwdewq,0,flight/travel
