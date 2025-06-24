@@ -333,7 +333,7 @@ function intervalUpdate()
 		--chat casting
 		hex.runPattern("EAST","waqa")--whisper reflection
 		local msg = hex.popStack()
-		msg = "mineores.action"
+		--msg = "mineores.action"
 		--msg = "brake-block.hexpattern"
 		if not not msg:match(".action$")then
 			msg = string.sub(msg,1,string.len(msg)-7)
