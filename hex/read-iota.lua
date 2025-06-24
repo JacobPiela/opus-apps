@@ -3,8 +3,11 @@ local args = {...}
 
 local wand = peripheral.find("wand")
 if wand then
-    wand.runPattern("EAST","aqqqqq")
-    iota = wand.popStack()
+    local hex = require('hex.wand')
+    hex.getLock()
+    hex.runPattern("EAST","aqqqqq")
+    iota = hex.popStack()
+    hex.freeLock()
 else
     local focal_port = peripheral.find('focal_port')
     if not focal_port then error("Need a wand or focal port connected") end

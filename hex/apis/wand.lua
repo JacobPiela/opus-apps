@@ -21,16 +21,17 @@ local Hex = {
 }
 
 function Hex.getLock()--broken after crash
-    local timeout = os.startTimer(7)
+    local timeout = os.startTimer(3)
     while _G.wandLock do
         event, id = os.pullEvent()
         if event == "timer" and id == timeout then
             _G.wandLock = false
-            error('Wand timeout are too many apps tyring to use it')
+            return false
         end
     end
     os.cancelTimer(timeout)
     _G.wandLock = true
+    return true
 end
 
 function Hex.freeLock()
@@ -125,7 +126,7 @@ end
 function Hex.runHexFile(file)
     local f = Util.readFile(file, 'rb')
     if not f then
-		error('Unable to open ' .. file)
+		return false
 	end
     local spell = HexConvert.compile(f)
     spell = Hex.iotaserde(spell)
@@ -135,7 +136,7 @@ end
 function Hex.runPatternFile(file)
     local f = Util.readFile(file, 'rb')
     if not f then
-		error('Unable to open ' .. file)
+		return false
 	end
     spell = Hex.iotaserde(textutils.unserialize(f))
     return Hex.cast(spell)

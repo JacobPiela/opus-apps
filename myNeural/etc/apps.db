@@ -1,7 +1,7 @@
 {
 	[ "85b381dad87f9d23cacb13b8c8bbeba89cf2f68a2" ] = {
 		title = "MyInterface",
-		category = "Neural",
+		category = "apps",
 		run = "myNeural.lua",
 		iconExt = "\030c\0317\151\131\131\131\0307\031c\148\010\030c\0317\151\131\0310\143\0317\131\0307\031c\148\010\0307\031c\138\030 \0317\151\131\131\131",
 		requires = "hex",
