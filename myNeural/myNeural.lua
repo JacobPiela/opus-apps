@@ -16,8 +16,8 @@ canvas.clear()
 
 local libraryPos = { ["iota$serde"] = "hextweaks:vec3", x=-2271.5, y=69.5, z=-1668.5}
 
-local scanInterval = 0.2
-local renderInterval = 0.05
+local scanInterval = 1
+local renderInterval = 0.1
 local scannerRange = 8
 local scannerWidth = scannerRange * 2 + 1
 local size = 0.3
@@ -379,7 +379,7 @@ function intervalUpdate()
 
 		hex.freeLock()
 		intervalCounter = intervalCounter + 1
-	    sleep(updatespeed)
+	    sleep(interval)
     end
 end
 
