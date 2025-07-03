@@ -325,7 +325,7 @@ function keyInput()
 end
 
 
-local interval = 0.5
+local interval = 0.75
 local intervalCounter = 0
 function intervalUpdate()
 	while programRunning do
