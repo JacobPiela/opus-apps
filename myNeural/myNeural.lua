@@ -37,6 +37,13 @@ for x = -scannerRange, scannerRange, 1 do
 end
 local mapPointer = canvas.addText({ offsetX, offsetY }, " ", 0xFFFFFFFF, size * 2)
 
+local mapNorth = canvas.addText({ offsetX, offsetY }, " ", 0xFFFFFFFF, size * 2)
+local mapSouth = canvas.addText({ offsetX, offsetY }, " ", 0xFFFFFFFF, size * 2)
+local mapEast = canvas.addText({ offsetX, offsetY }, " ", 0xFFFFFFFF, size * 2)
+local mapWest = canvas.addText({ offsetX, offsetY }, " ", 0xFFFFFFFF, size * 2)
+
+local flyStartPos = {x=0,y=0,z=0}
+
 
 config.mapEnabled = config.mapEnabled or false
 
@@ -44,6 +51,12 @@ config.mapOres = config.mapOres or false
 config.mapChests = config.mapChests or false
 config.mapChrystals = config.mapChrystals or false
 config.mapLava = config.mapLava or false
+
+config.autoRegen = config.autoRegen or false
+config.autoBreath = config.autoBreath or false
+config.antifall = config.antifall or false
+config.antifire = config.antifire or false
+
 
 Config.update('myNeural', config)
 
@@ -182,16 +195,52 @@ mediaText.setPosition(width - 110, height - 30)
 local programRunning = true
 
 local page = UI.Page {
-	add = UI.Button {
-		x = 2, y = -3,
-		text = ' + ',
+	nothing = UI.Button {
+		x = -6, y = -1,
+		text = '    ',
 		event = 'action',
-		help = 'Install or update',
+		help = 'Nothing',
+	},
+	UI.Checkbox {
+		x = 2, y = 2,
+		label = 'Auto Regen',
+		textColor = 'black',
+		backgroundColor = 'primary',
+		value = config.autoRegen,
+		event = "autoRegen",
+		help = 'Enable/Disable keep alive system',
+	},
+	UI.Checkbox {
+		x = 2, y = 4,
+		label = 'Auto Breath',
+		textColor = 'black',
+		backgroundColor = 'primary',
+		value = config.autoBreath,
+		event = "autoBreath",
+		help = 'Enable/Disable autoBreath',
+	},
+	UI.Checkbox {
+		x = 2, y = 6,
+		label = 'Antifall',
+		textColor = 'black',
+		backgroundColor = 'primary',
+		value = config.antifall,
+		event = "antifall",
+		help = 'Enable/Disable antifall',
+	},
+	UI.Checkbox {
+		x = 2, y = 8,
+		label = 'antiFire',
+		textColor = 'black',
+		backgroundColor = 'primary',
+		value = config.antiFire,
+		event = "antiFire",
+		help = 'Enable/Disable antifire',
 	},
 	UI.Checkbox {
 		x = -15, y = 2,
 		label = 'Map Enable',
-		textColor = 'yellow',
+		textColor = 'black',
 		backgroundColor = 'primary',
 		value = config.mapEnabled,
 		event = "mapOn",
@@ -200,7 +249,7 @@ local page = UI.Page {
 	UI.Checkbox {
 		x = -15, y = 4,
 		label = 'Ores',
-		textColor = 'yellow',
+		textColor = 'black',
 		backgroundColor = 'primary',
 		value = config.mapOres,
 		event = "oresOn",
@@ -209,7 +258,7 @@ local page = UI.Page {
 	UI.Checkbox {
 		x = -15, y = 6,
 		label = 'Chests',
-		textColor = 'yellow',
+		textColor = 'black',
 		backgroundColor = 'primary',
 		value = config.mapChests,
 		event = "chestsOn",
@@ -218,7 +267,7 @@ local page = UI.Page {
 	UI.Checkbox {
 		x = -15, y = 8,
 		label = 'Chrystals',
-		textColor = 'yellow',
+		textColor = 'black',
 		backgroundColor = 'primary',
 		value = config.mapChrystals,
 		event = "chrystalsOn",
@@ -227,7 +276,7 @@ local page = UI.Page {
 	UI.Checkbox {
 		x = -15, y = 10,
 		label = 'Lava',
-		textColor = 'yellow',
+		textColor = 'black',
 		backgroundColor = 'primary',
 		value = config.mapLava,
 		event = "lavaOn",
@@ -246,7 +295,6 @@ local page = UI.Page {
 			visible = true,
 		},
 	},
-	statusBar = UI.StatusBar { },
 	accelerators = {
 		[ 'control-q' ] = 'quit',
 	},
@@ -255,15 +303,22 @@ local page = UI.Page {
 
 function page:eventHandler(event)
 	if event.type == 'focus_change' then
-		self.statusBar:setStatus(event.focused.help)
 
 	elseif event.type == 'mapOn' then
 		config.mapEnabled = not config.mapEnabled
 		Config.update('myNeural', config)
 		if config.mapEnabled then
 			mapPointer.setText("^")
+			mapNorth.setText("N")
+			mapSouth.setText("S")
+			mapEast.setText("E")
+			mapWest.setText("W")
 		else
 			mapPointer.setText(" ")
+			mapNorth.setText(" ")
+			mapSouth.setText(" ")
+			mapEast.setText(" ")
+			mapWest.setText(" ")
 			for x = -scannerRange, scannerRange do
 				for z = -scannerRange, scannerRange do
 					local text = block_text[x][z]
@@ -287,6 +342,22 @@ function page:eventHandler(event)
 		config.mapLava = not config.mapLava
 		Config.update('myNeural', config)
 		updateBlockList()
+	elseif event.type == 'autoRegen' then
+		config.autoRegen = not config.autoRegen
+		Config.update('myNeural', config)
+		updateBlockList()
+	elseif event.type == 'autoBreath' then
+		config.autoBreath = not config.autoBreath
+		Config.update('myNeural', config)
+		updateBlockList()
+	elseif event.type == 'antifall' then
+		config.antifall = not config.antifall
+		Config.update('myNeural', config)
+		updateBlockList()
+	elseif event.type == 'antiFire' then
+		config.antiFire = not config.antiFire
+		Config.update('myNeural', config)
+		updateBlockList()
 	elseif event.type == 'quit' then
 		programRunning = false
 		canvas.clear()
@@ -299,9 +370,8 @@ end
 
 function uiUpdate()
 	UI:setPage(page)
-	page.statusBar:setStatus('loading...')
 	page:sync()
-
+	page:setFocus(page.nothing)
 	UI:start()
 end
 
@@ -358,24 +428,45 @@ function intervalUpdate()
 			Config.update('myNeural', config)
 		end
 
+		if config.antifall then
+			local meta = modules.getMetaOwner and modules.getMetaOwner()
+			if meta.motionY < -0.75 and not meta.isSneaking then
+				hex.runPatternFile("/spells/antifall.hexpattern")
+			end
+		end
+		if config.autoRegen then
+			local meta = modules.getMetaOwner and modules.getMetaOwner()
+			if meta.health < meta.maxHealth/2 then
+				hex.runPatternFile("/spells/regen.hexpattern")--6?
+			end
+		end
+		if config.antiFire then
+			local meta = modules.getMetaOwner and modules.getMetaOwner()
+			if meta.isBurning then
+				hex.runPattern("SOUTH_WEST","qaq")
+				hex.runPattern("EAST","weweeeee")
+			end
+		end
 		--slow updates
 		if intervalCounter % 5 == 1 then
-			--auto breath
-			local breath = hex.cast(
-				{
-					{angles = "qaq",["iota$serde"] = "hextweaks:pattern",startDir = "SOUTH_WEST"},--minds
-					{angles = "wwaade",["iota$serde"] = "hextweaks:pattern",startDir = "EAST"},--suffocation purification
-					["iota$serde"] = "hextweaks:list"
-				}
-			)[1]
-			if breath < 150 then
-                hex.runPattern("SOUTH_WEST","qaq")--minds
-                hex.runPattern("NORTH_WEST","aweeeeewaweeeee")--gasp
-            end
+			if config.autoBreath then--auto breath
+				local breath = hex.cast(
+					{
+						{angles = "qaq",["iota$serde"] = "hextweaks:pattern",startDir = "SOUTH_WEST"},--minds
+						{angles = "wwaade",["iota$serde"] = "hextweaks:pattern",startDir = "EAST"},--suffocation purification
+						["iota$serde"] = "hextweaks:list"
+					}
+				)[1]
+				if breath < 10 then
+					hex.runPattern("SOUTH_WEST","qaq")--minds
+					hex.runPattern("NORTH_WEST","aweeeeewaweeeee")--gasp
+				end
+			end
 
 			--Media display
-            mediaTotal.setText("Media Total: " .. hex.getMedia())
+			mediaTotal.setText("Media Total: " .. hex.getMedia())
 		end
+
 
 		hex.freeLock()
 		intervalCounter = intervalCounter + 1
@@ -411,24 +502,29 @@ local function scan()
     end
 end
 
+local function mapToscreen(angle,x,z)
+		local sx = offsetX + math.floor((math.cos(angle) * -x - math.sin(angle) * -z) * size * cellSize)
+		local sy = offsetY + math.floor((math.sin(angle) * -x + math.cos(angle) * -z) * size * cellSize)
+		return sx,sy
+end
+
 
 local function render()
     while true do
 		if config.mapEnabled and programRunning then
 			local meta = modules.getMetaOwner and modules.getMetaOwner()
 			local angle = meta and math.rad(-meta.yaw % 360) or math.rad(180)
+			mapNorth.setPosition(mapToscreen(angle,0,-9))
+			mapSouth.setPosition(mapToscreen(angle,0,9))
+			mapEast.setPosition(mapToscreen(angle,9,0))
+			mapWest.setPosition(mapToscreen(angle,-9,0))
 			for x = -scannerRange, scannerRange do
 				for z = -scannerRange, scannerRange do
 					local text = block_text[x][z]
 					local block = blocks[x][z]
 					
 					if block.block then
-						local px = math.cos(angle) * -x - math.sin(angle) * -z
-						local py = math.sin(angle) * -x + math.cos(angle) * -z
-						
-						local sx = math.floor(px * size * cellSize)
-						local sy = math.floor(py * size * cellSize)
-						text.setPosition(offsetX + sx, offsetY + sy)
+						text.setPosition(mapToscreen(angle,x,z))
 						text.setText(tostring(block.y))
 						text.setShadow(true)
 						text.setColor(table.unpack(colours[block.block]))
