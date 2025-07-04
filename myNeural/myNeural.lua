@@ -14,7 +14,7 @@ local canvas = modules.canvas()
 local width, height = canvas.getSize()
 canvas.clear()
 
-local libraryPos = { ["iota$serde"] = "hextweaks:vec3", x=-2271.5, y=69.5, z=-1668.5}
+local libraryPos = { ["iota$serde"] = "hextweaks:vec3", x=-2379.5, y=10.5, z=-1730.5}
 
 local scanInterval = 1
 local renderInterval = 0.1
