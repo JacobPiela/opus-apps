@@ -406,7 +406,7 @@ function intervalUpdate()
 		local msg = hex.popStack()
 		--msg = "mineores.action"
 		--msg = "brake-block.hexpattern"
-		if not msg == lastMsg then
+		if msg ~= lastMsg then
 			lastMsg = msg
 			if not not msg:match(".action$")then
 				msg = string.sub(msg,1,string.len(msg)-7)
