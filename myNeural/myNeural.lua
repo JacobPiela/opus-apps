@@ -397,6 +397,7 @@ end
 
 local interval = 0.75
 local intervalCounter = 0
+local lastMsg = ""
 function intervalUpdate()
 	while programRunning do
 		hex.getLock()
@@ -405,37 +406,40 @@ function intervalUpdate()
 		local msg = hex.popStack()
 		--msg = "mineores.action"
 		--msg = "brake-block.hexpattern"
-		if not not msg:match(".action$")then
-			msg = string.sub(msg,1,string.len(msg)-7)
-			if actitons[msg] then
-				activeSpell = actitons[msg]
-				activeSpellType = "action"
-				activeSpellName.setText("Spell: ".. msg)
+		if not msg == lastMsg then
+			lastMsg = msg
+			if not not msg:match(".action$")then
+				msg = string.sub(msg,1,string.len(msg)-7)
+				if actitons[msg] then
+					activeSpell = actitons[msg]
+					activeSpellType = "action"
+					activeSpellName.setText("Spell: ".. msg)
+				end
+			elseif not not msg:match(".tpplayer$")then
+				msg = string.sub(msg,1,string.len(msg)-9)
+				local x_str, y_str, z_str = msg:match("([%-?%d%.]+),([%-?%d%.]+),([%-?%d%.]+)")
+				hex.pushStack({ ["iota$serde"] = "hextweaks:vec3", x=tonumber(x_str), y= tonumber(y_str), z= tonumber(z_str)})
+				hex.runPatternFile("/spells/tpplayer.hexpattern")
+			elseif not not msg:match(".tppos$")then
+				msg = string.sub(msg,1,string.len(msg)-6)
+				local x_str, y_str, z_str = msg:match("([%-?%d%.]+),([%-?%d%.]+),([%-?%d%.]+)")
+				hex.pushStack({ ["iota$serde"] = "hextweaks:vec3", x=tonumber(x_str), y= tonumber(y_str), z= tonumber(z_str)})
+				hex.runPatternFile("/spells/tppos.hexpattern")
+			elseif not not msg:match(".hex$")then
+				activeSpell = msg
+				config.activeSpell = msg
+				activeSpellType = "hex"
+				config.activeSpellType = "hex"
+				activeSpellName.setText("Spell: ".. string.sub(msg,1,string.len(msg)-3))
+				Config.update('myNeural', config)
+			elseif not not msg:match(".hexpattern$")then
+				activeSpell = msg
+				config.activeSpell = msg
+				activeSpellType = "hexpattern"
+				config.activeSpellType = "hexpattern"
+				activeSpellName.setText("Spell: ".. string.sub(msg,1,string.len(msg)-11))
+				Config.update('myNeural', config)
 			end
-		elseif not not msg:match(".tpplayer$")then
-			msg = string.sub(msg,1,string.len(msg)-9)
-			local x_str, y_str, z_str = msg:match("([%-?%d%.]+),([%-?%d%.]+),([%-?%d%.]+)")
-			hex.pushStack({ ["iota$serde"] = "hextweaks:vec3", x=tonumber(x_str), y= tonumber(y_str), z= tonumber(z_str)})
-			hex.runPatternFile("/spells/tpplayer.hexpattern")
-		elseif not not msg:match(".tppos$")then
-			msg = string.sub(msg,1,string.len(msg)-6)
-			local x_str, y_str, z_str = msg:match("([%-?%d%.]+),([%-?%d%.]+),([%-?%d%.]+)")
-			hex.pushStack({ ["iota$serde"] = "hextweaks:vec3", x=tonumber(x_str), y= tonumber(y_str), z= tonumber(z_str)})
-			hex.runPatternFile("/spells/tppos.hexpattern")
-		elseif not not msg:match(".hex$")then
-			activeSpell = msg
-			config.activeSpell = msg
-			activeSpellType = "hex"
-			config.activeSpellType = "hex"
-			activeSpellName.setText("Spell: ".. string.sub(msg,1,string.len(msg)-3))
-			Config.update('myNeural', config)
-		elseif not not msg:match(".hexpattern$")then
-			activeSpell = msg
-			config.activeSpell = msg
-			activeSpellType = "hexpattern"
-			config.activeSpellType = "hexpattern"
-			activeSpellName.setText("Spell: ".. string.sub(msg,1,string.len(msg)-11))
-			Config.update('myNeural', config)
 		end
 
 		if config.antifall then
