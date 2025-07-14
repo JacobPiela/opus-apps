@@ -414,13 +414,13 @@ function intervalUpdate()
 			end
 		elseif not not msg:match(".tpplayer$")then
 			msg = string.sub(msg,1,string.len(msg)-9)
-			local x_str, y_str, z_str = msg:match("(%d+),(%d+),(%d+)")
-			wand.pushStack({ ["iota$serde"] = "hextweaks:vec3", x= x_str, y= y_str, z= z_str})
+			local x_str, y_str, z_str = msg:match("([%-?%d%.]+),([%-?%d%.]+),([%-?%d%.]+)")
+			wand.pushStack({ ["iota$serde"] = "hextweaks:vec3", x=tonumber(x_str), y= tonumber(y_str), z= tonumber(z_str)})
 			hex.runPatternFile("/spells/tpplayer.hexpattern")
 		elseif not not msg:match(".tppos$")then
 			msg = string.sub(msg,1,string.len(msg)-6)
-			local x_str, y_str, z_str = msg:match("(%d+),(%d+),(%d+)")
-			wand.pushStack({ ["iota$serde"] = "hextweaks:vec3", x= x_str, y= y_str, z= z_str})
+			local x_str, y_str, z_str = msg:match("([%-?%d%.]+),([%-?%d%.]+),([%-?%d%.]+)")
+			wand.pushStack({ ["iota$serde"] = "hextweaks:vec3", x=tonumber(x_str), y= tonumber(y_str), z= tonumber(z_str)})
 			hex.runPatternFile("/spells/tppos.hexpattern")
 		elseif not not msg:match(".hex$")then
 			activeSpell = msg
